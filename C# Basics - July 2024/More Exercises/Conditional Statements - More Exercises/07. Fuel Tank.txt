@@ -1,0 +1,65 @@
+using System;
+
+namespace _07._Fuel_Tank
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = Console.ReadLine();
+            double fuel = double.Parse(Console.ReadLine());
+            string diesel = "Diesel";
+            string gasoline = "Gasoline";
+            string gas = "Gas";
+            if(a==diesel)
+            {
+                if (fuel >= 25)
+                {
+                    Console.WriteLine("You have enough diesel.");
+                }
+                else if (fuel < 25)
+                {
+                    Console.WriteLine("Fill your tank with diesel!");
+
+                }
+            }
+            
+            if(a==gasoline)
+                {
+                    if(fuel>=25)
+                    {
+                        Console.WriteLine("You have enough gasoline.");
+                    }
+                    else if(fuel<25)
+                    {
+                        Console.WriteLine("Fill your tank with gasoline!");
+                    }   
+
+                }
+            
+            if (a == gas)
+            {
+                if (fuel >= 25)
+                {
+                    Console.WriteLine("You have enough gas.");
+                }
+                else if (fuel < 25)
+                {
+                    Console.WriteLine("Fill your tank with gas!");
+                }
+            }
+            
+            if(a!=diesel)
+            {
+                if(a!=gasoline)
+                {
+                    if(a!=gas)
+                    {
+                        Console.WriteLine("Invalid fuel!");
+                    }
+                }
+            }
+            
+        }
+    }
+}

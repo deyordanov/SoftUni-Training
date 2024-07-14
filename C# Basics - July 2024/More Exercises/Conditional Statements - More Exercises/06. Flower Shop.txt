@@ -1,0 +1,35 @@
+using System;
+
+namespace _06._Flower_Shop
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int magnoliiBr = int.Parse(Console.ReadLine());
+            int ziumbiulBr = int.Parse(Console.ReadLine());
+            int roziBr = int.Parse(Console.ReadLine());
+            int kaktusBr = int.Parse(Console.ReadLine());
+            double gift = double.Parse(Console.ReadLine());
+            double magnolii = 3.25;
+            double ziumbiul = 4;
+            double rozi = 3.50;
+            double kaktus = 8;
+            double suma1 = magnoliiBr * magnolii + ziumbiulBr * ziumbiul + kaktusBr * kaktus + roziBr * rozi;
+            double suma2 = suma1 * 0.05;
+            double total = suma1 - suma2;
+            if(total>=gift)
+            {
+                double left1 = total - gift;
+                double left = Math.Floor(left1);
+                Console.WriteLine("She is left with " + left +" leva.");
+            }
+            else if(total<gift)
+            {
+                double left1 = gift - total;
+                double left = Math.Ceiling(left1);
+                Console.WriteLine("She will have to borrow " + left + " leva.");
+            }
+        }
+    }
+}

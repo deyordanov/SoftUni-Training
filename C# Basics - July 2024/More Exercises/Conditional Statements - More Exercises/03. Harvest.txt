@@ -1,0 +1,34 @@
+using System;
+
+namespace _03._Harvest
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = int.Parse(Console.ReadLine());
+            double y = double.Parse(Console.ReadLine());
+            int z = int.Parse(Console.ReadLine());
+            int workers = int.Parse(Console.ReadLine());
+            double grapes = x * y;
+            double wine = (grapes * 0.4) / 2.5;
+            if(wine<z)
+            {
+                double under = z - wine;
+                double down = Math.Floor(under);
+                Console.WriteLine("It will be a tough winter! More " + down + " liters wine needed.");
+            }
+            else if(wine>=z)
+            {
+                double down = Math.Ceiling(wine);
+                double left = wine - z;
+                double worker = left / workers;
+                double up = Math.Ceiling(worker);
+                Console.WriteLine("Good harvest this year! Total wine: " + down + " liters.");
+                Console.WriteLine(left + " liters left -> " + up + " liters per person.");
+            }
+
+
+        }
+    }
+}

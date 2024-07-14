@@ -1,0 +1,60 @@
+using System;
+
+namespace _04._Transport_Price
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            string time = Console.ReadLine();
+            string day = "day";
+            string night = "night";
+
+            if(time==day)
+            {
+                if(n<20&&n>0)
+                {
+                    double start = 0.70;
+                    double tax = 0.79;
+                    double expense = (n * tax) + start;
+                    Console.WriteLine($"{expense:f2}");                    
+                }
+                else if(n>=20&&n<100)
+                {
+                    double tax = 0.09;
+                    double expense = n * tax;
+                    Console.WriteLine($"{expense:f2}");
+                }
+                else if(n>=100)
+                {
+                    double tax = 0.06;
+                    double expense = n * tax;
+                    Console.WriteLine($"{expense:f2}");
+                }
+            }
+            else if(time==night)
+            {
+                if(n<20&&n>0)
+                {
+                    double start = 0.70;
+                    double tax = 0.90;
+                    double expense = (n * tax) + start;
+                    Console.WriteLine($"{expense:f2}");
+                }
+                else if(n>=20&&n<100)
+                {
+                    double tax = 0.09;
+                    double expense = n * tax;
+                    Console.WriteLine($"{expense:f2}");
+                }
+                else if(n>=100)
+                {
+                    double tax = 0.06;
+                    double expense = n * tax;
+                    Console.WriteLine($"{expense:f2}");
+                }
+            }
+        }
+    }
+}

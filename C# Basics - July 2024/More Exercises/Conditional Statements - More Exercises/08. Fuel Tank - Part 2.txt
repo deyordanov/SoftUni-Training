@@ -1,0 +1,177 @@
+using System;
+
+namespace _08._Fuel_Tank___Part_2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = Console.ReadLine();
+            double fuelAm = double.Parse(Console.ReadLine());
+            string card = Console.ReadLine();
+            string diesel = "Diesel";
+            string gasoline = "Gasoline";
+            string gas = "Gas";
+            string yes = "Yes";
+            string no = "No";
+            if (fuelAm >= 20 && fuelAm <= 25)
+            {
+                if (a == diesel)
+                {
+                    if (card == yes)
+                    {
+                        double fuelCard = fuelAm * 2.21;
+                        double sum = fuelCard * 0.08;
+                        double totalSum = fuelCard - sum;
+                        Console.WriteLine($"{totalSum:f2}" + " lv.");
+                    }
+                    else if (card == no)
+                    {
+                        double fuelCard = fuelAm*2.33;
+                        double sum = fuelCard * 0.08;
+                        double totalSum = fuelCard - sum;
+                        Console.WriteLine($"{totalSum:f2}" + " lv.");
+                    }
+                }
+
+                if (a == gasoline)
+                {
+                    if (card == yes)
+                    {
+                        double fuelCard = fuelAm * 2.04;
+                        double sum = fuelCard * 0.08;
+                        double totalSum = fuelCard - sum;
+                        Console.WriteLine($"{totalSum:f2}" + " lv.");
+                    }
+                    else if (card == no)
+                    {
+                        double fuelCard = fuelAm*2.22;
+                        double sum = fuelCard * 0.08;
+                        double totalSum = fuelCard - sum;
+                        Console.WriteLine($"{totalSum:f2}" + " lv.");
+                    }
+                }
+
+                if (a == gas)
+                {
+                    if (card == yes)
+                    {
+                        double fuelCard = fuelAm * 0.85;
+                        double sum = fuelCard * 0.08;
+                        double totalSum = fuelCard - sum;
+                        Console.WriteLine($"{totalSum:f2}" + " lv.");
+                    }
+                    else if (card == no)
+                    {
+                        double fuelCard = fuelAm*0.93;
+                        double sum = fuelCard * 0.08;
+                        double totalSum = fuelCard - sum;
+                        Console.WriteLine($"{totalSum:f2}" + " lv.");
+                    }
+                }
+                
+            }
+            else if(fuelAm>25)
+            {
+                if (a == diesel)
+                {
+                    if (card == yes)
+                    {
+                        double fuelCard = fuelAm * 2.21;
+                        double sum = fuelCard * 0.1;
+                        double totalSum = fuelCard - sum;
+                        Console.WriteLine($"{totalSum:f2}" + " lv.");
+                    }
+                    else if (card == no)
+                    {
+                        double fuelCard = fuelAm * 2.33;
+                        double sum = fuelCard * 0.1;
+                        double totalSum = fuelCard - sum;
+                        Console.WriteLine($"{totalSum:f2}" + " lv.");
+                    }
+                }
+
+                if (a == gasoline)
+                {
+                    if (card == yes)
+                    {
+                        double fuelCard = fuelAm * 2.04;
+                        double sum = fuelCard * 0.1;
+                        double totalSum = fuelCard - sum;
+                        Console.WriteLine($"{totalSum:f2}" + " lv.");
+                    }
+                    else if (card == no)
+                    {
+                        double fuelCard = fuelAm * 2.22;
+                        double sum = fuelCard * 0.1;
+                        double totalSum = fuelCard - sum;
+                        Console.WriteLine($"{totalSum:f2}" + " lv.");
+                    }
+                }
+
+                if (a == gas)
+                {
+                    if (card == yes)
+                    {
+                        double fuelCard = fuelAm * 0.85;
+                        double sum = fuelCard * 0.1;
+                        double totalSum = fuelCard - sum;
+                        Console.WriteLine($"{totalSum:f2}" + " lv.");
+                    }
+                    else if (card == no)
+                    {
+                        double fuelCard = fuelAm * 0.93;
+                        double sum = fuelCard * 0.1;
+                        double totalSum = fuelCard - sum;
+                        Console.WriteLine($"{totalSum:f2}" + " lv.");
+                    }
+                }
+            }
+            else
+            {
+                if (a == diesel)
+                {
+                    if (card == yes)
+                    {
+                        double fuelCard = fuelAm * 2.21;
+                        Console.WriteLine($"{fuelCard:f2}" + " lv.");
+                    }
+                    else if (card == no)
+                    {
+                        double fuelCard = fuelAm * 2.33;
+                        Console.WriteLine($"{fuelCard:f2}" + " lv.");
+                    }
+                }
+
+                if (a == gasoline)
+                {
+                    if (card == yes)
+                    {
+                        double fuelCard = fuelAm * 2.04; 
+                        Console.WriteLine($"{fuelCard:f2}" + " lv.");
+                    }
+                    else if (card == no)
+                    {
+                        double fuelCard = fuelAm * 2.22;
+                        Console.WriteLine($"{fuelCard:f2}" + " lv.");
+                    }
+                }
+
+                if (a == gas)
+                {
+                    if (card == yes)
+                    {
+                        double fuelCard = fuelAm * 0.85;
+                        Console.WriteLine($"{fuelCard:f2}" + " lv.");
+                    }
+                    else if (card == no)
+                    {
+                        double fuelCard = fuelAm * 0.93; 
+                        Console.WriteLine($"{fuelCard:f2}" + " lv.");
+                    }
+                }
+            }
+                
+        }
+    }
+}

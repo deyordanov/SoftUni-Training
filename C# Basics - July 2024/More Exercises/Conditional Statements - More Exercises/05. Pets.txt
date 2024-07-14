@@ -1,0 +1,31 @@
+using System;
+
+namespace _05._Pets
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int days = int.Parse(Console.ReadLine());
+            int foodKg = int.Parse(Console.ReadLine());
+            double dogKg = double.Parse(Console.ReadLine());
+            double catKg = double.Parse(Console.ReadLine());    
+            double turtleGr = double.Parse(Console.ReadLine());
+            int food = days * foodKg;
+            double foodNeeded = (dogKg + catKg + turtleGr/1000)*days;
+            if(foodKg>=foodNeeded)
+            {
+                double foodLeft = foodKg - foodNeeded;
+                double left = Math.Floor(foodLeft);
+                Console.WriteLine(left + " kilos of food left.");
+            }
+            else if (foodKg<foodNeeded)
+            {
+                double foodNeed = foodNeeded - foodKg;
+                double need = Math.Ceiling(foodNeed);
+                Console.WriteLine(need + " more kilos of food are needed.");
+            }
+
+        }
+    }
+}

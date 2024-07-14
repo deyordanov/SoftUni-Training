@@ -1,0 +1,32 @@
+using System;
+
+namespace _01._Pipes_In_Pool
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int V = int.Parse(Console.ReadLine());
+            int P1 = int.Parse(Console.ReadLine());
+            int P2 = int.Parse(Console.ReadLine());
+            double H = double.Parse(Console.ReadLine());
+            double water = P1 * H + P2 * H;
+            
+            if(water<=V)
+            {
+                double filled = water/V*100;
+                Console.WriteLine("The pool is: " + filled + "%");
+                double p1Fill = ((P1*H) / (water/100));
+                Console.WriteLine("Pipe 1:" + $"{p1Fill:f2}" + "%");
+                double p2Fill = ((P2*H) / (water/100)); //p1 * hours / water * 100
+                Console.WriteLine("Pipe 2:" + $"{p2Fill:f2}" + "%");    
+            }
+            else if(water>V)
+            {
+                double overflow = (water - V) ;
+                Console.WriteLine("For " + $"{H:f2}" + " hours the pool overflows with: " );
+                Console.WriteLine($"{overflow:f2}" + " liters");
+            }
+        }
+    }
+}

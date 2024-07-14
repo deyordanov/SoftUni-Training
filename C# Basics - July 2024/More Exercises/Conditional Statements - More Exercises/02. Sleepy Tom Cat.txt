@@ -1,0 +1,31 @@
+using System;
+
+namespace _02._Sleepy_Tom_Cat
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int rest = int.Parse(Console.ReadLine());
+            int work = 365 - rest;
+            int norm = 30000;
+            int play = work * 63 + rest * 127;
+            if (play>norm)
+            {
+                Console.WriteLine("Tom will run away");
+                int over = play - norm;
+                double minutes = over % 60;
+                double hours = (over - minutes)/60;
+                Console.WriteLine( hours + " hours and " + minutes + " minutes more for play");
+            }
+            else if (play<norm)
+            {
+                Console.WriteLine("Tom sleeps well");
+                int under = norm - play;
+                double minutes = under % 60;
+                double hours = (under - minutes)/60;
+                Console.WriteLine(hours + " hours and " + minutes + " minutes less for play");
+            }
+        }
+    }
+}
