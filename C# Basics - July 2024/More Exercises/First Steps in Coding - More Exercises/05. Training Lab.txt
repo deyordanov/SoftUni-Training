@@ -1,0 +1,26 @@
+using System;
+
+namespace _05._Training_Lab
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double w = double.Parse(Console.ReadLine()); // duljina
+            double h = double.Parse(Console.ReadLine()); //shirochina
+            double a = (h - 1) % 0.7;
+            double b = (h - 1 - a) / 0.7;
+            
+
+            double c = w % 1.2;
+            double d = (w-c)/1.2;
+            
+
+            double numWork = b * d - 3;
+            
+            Console.WriteLine(numWork);
+
+            
+        }
+    }
+}

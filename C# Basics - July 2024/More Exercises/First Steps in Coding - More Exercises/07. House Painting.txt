@@ -1,0 +1,31 @@
+using System;
+
+namespace _07._House_Painting
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double x = double.Parse(Console.ReadLine()); // visochina na kushatata
+            double y = double.Parse(Console.ReadLine()); // duljina na stranichna stena
+            double h = double.Parse(Console.ReadLine()); // visochina na triugulnik na pokriva
+
+            double squareSide = x;
+            double squareS = (squareSide * squareSide);
+            double doorS = (1.2 * 2);
+            double frontBack = ((squareS - doorS)+squareS);
+            double rectangleS = y * squareSide;
+            double windowS = 1.5 * 1.5;
+            double sides = (rectangleS - windowS)*2;
+            double totalGreenLiters = (frontBack + sides) / 3.4;
+
+            double triangleS = ((squareSide * h) / 2)*2;
+            double rectangleRoofS = (squareSide * y)*2;
+            double roofS = triangleS + rectangleRoofS;
+            double totalRedLiters = roofS / 4.3;
+
+            Console.WriteLine($"{totalGreenLiters:f2}");
+            Console.WriteLine($"{totalRedLiters:f2}");
+        }
+    }
+}

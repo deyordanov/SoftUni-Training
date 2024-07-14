@@ -1,0 +1,18 @@
+using System;
+
+namespace _04._Vegetable_Market
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double veg = double.Parse(Console.ReadLine());
+            double fruit = double.Parse(Console.ReadLine());
+            double kgVeg = int.Parse(Console.ReadLine());
+            double kgFruit = int.Parse(Console.ReadLine());
+            double sumLv = veg * kgVeg + fruit * kgFruit;
+            double sumEu = sumLv / 1.94;
+            Console.WriteLine($"{sumEu:f2}");
+        }
+    }
+}

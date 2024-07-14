@@ -1,0 +1,26 @@
+using System;
+
+namespace _06._Fishland
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double skumriq = double.Parse(Console.ReadLine());
+            double caca = double.Parse(Console.ReadLine()); 
+            double palamudKg = double.Parse(Console.ReadLine());
+            double safridKg = double.Parse(Console.ReadLine());
+            int midiKg = int.Parse(Console.ReadLine());
+
+            double palamudCena = (skumriq * 0.6) + skumriq;
+            double safridCena = (caca * 0.8) + caca;
+            double midiCena = midiKg * 7.50;
+
+            double smetka = palamudCena * palamudKg + safridCena * safridKg + midiCena;
+            Console.WriteLine($"{smetka:f2}");
+
+
+                
+        }
+    }
+}
