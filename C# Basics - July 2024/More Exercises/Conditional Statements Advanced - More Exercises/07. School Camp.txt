@@ -1,0 +1,268 @@
+using System;
+
+namespace _07._School_Camp
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string season = Console.ReadLine();
+            string group = Console.ReadLine();
+            int number = int.Parse(Console.ReadLine());
+            int nights = int.Parse(Console.ReadLine());
+
+            if (season == "Winter")
+            {
+                if (group == "boys")
+                {
+                    string sport = "Judo";
+                    double price = nights * 9.60*number;
+                    if (number >= 50)
+                    {
+                        price = price - (price * 0.5);
+                        Console.WriteLine(sport + " "+ $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 50 && number >= 20)
+                    {
+                        price = price - (price * 0.15);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 20 && number >= 10)
+                    {
+                        price = price - (price * 0.05);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+                    }
+                }
+                else if (group == "girls")
+                {
+                    string sport = "Gymnastics";
+                    double price = nights * 9.60*number;
+                    if (number >= 50)
+                    {
+                        price = price - (price * 0.5);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 50 && number >= 20)
+                    {
+                        price = price - (price * 0.15);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 20 && number >= 10)
+                    {
+                        price = price - (price * 0.05);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+                    }
+                }
+                else if (group == "mixed")
+                {
+                    string sport = "Ski";
+                    double price = nights * 10*number;
+                    if (number >= 50)
+                    {
+                        price = price - (price * 0.5);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 50 && number >= 20)
+                    {
+                        price = price - (price * 0.15);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 20 && number >= 10)
+                    {
+                        price = price - (price * 0.05);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+                    }
+                }
+            }
+            else if (season == "Spring")
+            {
+                if (group == "boys")
+                {
+                    string sport = "Tennis";
+                    double price = nights * 7.20*number;
+                    if (number >= 50)
+                    {
+                        price = price - (price * 0.5);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 50 && number >= 20)
+                    {
+                        price = price - (price * 0.15);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 20 && number >= 10)
+                    {
+                        price = price - (price * 0.05);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+                    }
+                }
+                else if (group == "girls")
+                {
+                    string sport = "Athletics";
+                    double price = number * 7.20*nights;
+                    if (number >= 50)
+                    {
+                        price = price - (price * 0.5);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 50 && number >= 20)
+                    {
+                        price = price - (price * 0.15);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 20 && number >= 10)
+                    {
+                        price = price - (price * 0.05);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+                    }
+                }
+                else if (group == "mixed")
+                {
+                    string sport = "Cycling";
+                    double price = number * 9.50*nights;
+                    if (number >= 50)
+                    {
+                        price = price - (price * 0.5);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 50 && number >= 20)
+                    {
+                        price = price - (price * 0.15);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 20 && number >= 10)
+                    {
+                        price = price - (price * 0.05);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+                    }   
+                }
+            }
+            else if(season=="Summer")
+            {
+                if (group == "boys")
+                {
+                    string sport = "Football";
+                    double price = number * 15*nights;
+                    if (number >= 50)
+                    {
+                        price = price - (price * 0.5);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 50 && number >= 20)
+                    {
+                        price = price - (price * 0.15);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 20 && number >= 10)
+                    {
+                        price = price - (price * 0.05);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+                    }
+                }
+                else if (group == "girls")
+                {
+                    string sport = "Volleyball";
+                    double price = number * 15*nights;
+                    if (number >= 50)
+                    {
+                        price = price - (price * 0.5);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 50 && number >= 20)
+                    {
+                        price = price - (price * 0.15);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 20 && number >= 10)
+                    {
+                        price = price - (price * 0.05);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+                    }
+                }
+                else if (group == "mixed")
+                {
+                    string sport = "Swimming";
+                    double price = number * 20*nights;
+                    if (number >= 50)
+                    {
+                        price = price - (price * 0.5);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 50 && number >= 20)
+                    {
+                        price = price - (price * 0.15);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else if (number < 20 && number >= 10)
+                    {
+                        price = price - (price * 0.05);
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine(sport + " " + $"{price:f2}" + " lv.");
+                    }
+                }
+            }
+        }
+    }
+}

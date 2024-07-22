@@ -1,0 +1,61 @@
+using System;
+
+namespace _05._Vacation
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double budget = double.Parse(Console.ReadLine());
+            string season = Console.ReadLine();
+            if(budget<=1000)
+            {
+                string stay = "Camp";
+                if(season=="Summer")
+                {
+                    string location = "Alaska";
+                    double price = budget * 0.65;
+                    Console.WriteLine(location + " - "+ stay + " - "+ $"{price:f2}");
+                }
+                else if(season=="Winter")
+                {
+                    string location = "Morocco";
+                    double price = budget * 0.45;
+                    Console.WriteLine(location + " - " + stay + " - " + $"{price:f2}");
+                }
+            }
+            else if(budget>1000&budget<=3000)
+            {
+                string stay = "Hut";
+                if (season == "Summer")
+                {
+                    string location = "Alaska";
+                    double price = budget * 0.8;
+                    Console.WriteLine(location + " - " + stay + " - " + $"{price:f2}");
+                }
+                else if (season == "Winter")
+                {
+                    string location = "Morocco";
+                    double price = budget * 0.6;
+                    Console.WriteLine(location + " - " + stay + " - " + $"{price:f2}");
+                }
+            }
+            else if(budget>3000)
+            {
+                string stay = "Hotel";
+                if (season == "Summer")
+                {
+                    string location = "Alaska";
+                    double price = budget * 0.9;
+                    Console.WriteLine(location + " - " + stay + " - " + $"{price:f2}");
+                }
+                else if (season == "Winter")
+                {
+                    string location = "Morocco";
+                    double price = budget * 0.9;
+                    Console.WriteLine(location + " - " + stay + " - " + $"{price:f2}");
+                }
+            }
+        }
+    }
+}

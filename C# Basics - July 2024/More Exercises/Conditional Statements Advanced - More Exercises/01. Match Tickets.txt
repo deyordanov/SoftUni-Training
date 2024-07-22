@@ -1,0 +1,173 @@
+using System;
+
+namespace _01._Match_Tickets
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double budget = double.Parse(Console.ReadLine());
+            string type = Console.ReadLine();
+            int people = int.Parse(Console.ReadLine());
+
+            if(type=="VIP")
+            {
+                double ticket = 499.99*people;
+                if(people>=1&&people<=4)
+                {
+                    double transport = budget * 0.75;
+                    double left = budget - transport;
+                    if(left>=ticket)
+                    {
+                         double leftFromTicket = left - ticket;
+                        Console.WriteLine("Yes! You have " + $"{leftFromTicket:f2}" + " leva left.");
+                    }
+                    else if(left<ticket)
+                    {
+                        double needForTicket = ticket - left;
+                        Console.WriteLine("Not enough money! You need " + $"{needForTicket:f2}" + " leva.");
+                    }
+                }
+                else if(people>=5&&people<=9)
+                {
+                    double transport = budget * 0.6;
+                    double left = budget - transport;
+                    if (left >= ticket)
+                    {
+                        double leftFromTicket = left - ticket;
+                        Console.WriteLine("Yes! You have " + $"{leftFromTicket:f2}" + " leva left.");
+                    }
+                    else if (left < ticket)
+                    {
+                        double needForTicket = ticket - left;
+                        Console.WriteLine("Not enough money! You need " + $"{needForTicket:f2}" + " leva.");
+                    }
+                }
+                else if(people>=10&&people<=24)
+                {
+                    double transport = budget * 0.5;
+                    double left = budget - transport;
+                    if (left >= ticket)
+                    {
+                        double leftFromTicket = left - ticket;
+                        Console.WriteLine("Yes! You have " + $"{leftFromTicket:f2}" + " leva left.");
+                    }
+                    else if (left < ticket)
+                    {
+                        double needForTicket = ticket - left;
+                        Console.WriteLine("Not enough money! You need " + $"{needForTicket:f2}" + " leva.");
+                    }
+                }
+                else if(people>=25&&people<=49)
+                {
+                    double transport = budget * 0.4;
+                    double left = budget - transport;
+                    if (left >= ticket)
+                    {
+                        double leftFromTicket = left - ticket;
+                        Console.WriteLine("Yes! You have " + $"{leftFromTicket:f2}" + " leva left.");
+                    }
+                    else if (left < ticket)
+                    {
+                        double needForTicket = ticket - left;
+                        Console.WriteLine("Not enough money! You need " + $"{needForTicket:f2}" + " leva.");
+                    }
+                }
+                else if(people>=50)
+                {
+                    double transport = budget * 0.25;
+                    double left = budget - transport;
+                    if (left >= ticket)
+                    {
+                        double leftFromTicket = left - ticket;
+                        Console.WriteLine("Yes! You have " + $"{leftFromTicket:f2}" + " leva left.");
+                    }
+                    else if (left < ticket)
+                    {
+                        double needForTicket = ticket - left;
+                        Console.WriteLine("Not enough money! You need " + $"{needForTicket:f2}" + " leva.");
+                    }
+                }    
+            }
+            else if(type=="Normal")
+            {
+                double ticket = 249.99 * people;
+                if (people >= 1 && people <= 4)
+                {
+                    double transport = budget * 0.75;
+                    double left = budget - transport;
+                    if (left >= ticket)
+                    {
+                        double leftFromTicket = left - ticket;
+                        Console.WriteLine("Yes! You have " + $"{leftFromTicket:f2}" + " leva left.");
+                    }
+                    else if (left < ticket)
+                    {
+                        double needForTicket = ticket - left;
+                        Console.WriteLine("Not enough money! You need " + $"{needForTicket:f2}" + " leva.");
+                    }
+                }
+                else if (people >= 5 && people <= 9)
+                {
+                    double transport = budget * 0.6;
+                    double left = budget - transport;
+                    if (left >= ticket)
+                    {
+                        double leftFromTicket = left - ticket;
+                        Console.WriteLine("Yes! You have " + $"{leftFromTicket:f2}" + " leva left.");
+                    }
+                    else if (left < ticket)
+                    {
+                        double needForTicket = ticket - left;
+                        Console.WriteLine("Not enough money! You need " + $"{needForTicket:f2}" + " leva.");
+                    }
+                }
+                else if (people >= 10 && people <= 24)
+                {
+                    double transport = budget * 0.5;
+                    double left = budget - transport;
+                    if (left >= ticket)
+                    {
+                        double leftFromTicket = left - ticket;
+                        Console.WriteLine("Yes! You have " + $"{leftFromTicket:f2}" + " leva left.");
+                    }
+                    else if (left < ticket)
+                    {
+                        double needForTicket = ticket - left;
+                        Console.WriteLine("Not enough money! You need " + $"{needForTicket:f2}" + " leva.");
+                    }
+                }
+                else if (people >= 25 && people <= 49)
+                {
+                    double transport = budget * 0.4;
+                    double left = budget - transport;
+                    if (left >= ticket)
+                    {
+                        double leftFromTicket = left - ticket;
+                        Console.WriteLine("Yes! You have " + $"{leftFromTicket:f2}" + " leva left.");
+                    }
+                    else if (left < ticket)
+                    {
+                        double needForTicket = ticket - left;
+                        Console.WriteLine("Not enough money! You need " + $"{needForTicket:f2}" + " leva.");
+                    }
+                }
+                else if (people >= 50)
+                {
+                    double transport = budget * 0.25;
+                    double left = budget - transport;
+                    if (left >= ticket)
+                    {
+                        double leftFromTicket = left - ticket;
+                        Console.WriteLine("Yes! You have " + $"{leftFromTicket:f2}" + " leva left.");
+                    }
+                    else if (left < ticket)
+                    {
+                        double needForTicket = ticket - left;
+                        Console.WriteLine("Not enough money! You need " + $"{needForTicket:f2}" + " leva.");
+                    }
+                }
+            }
+        }
+    }
+}

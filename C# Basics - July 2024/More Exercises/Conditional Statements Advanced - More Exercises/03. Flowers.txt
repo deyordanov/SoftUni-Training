@@ -1,0 +1,242 @@
+using System;
+
+namespace _03._Flowerss
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int hrizantemi = int.Parse(Console.ReadLine());
+            int rozi = int.Parse(Console.ReadLine());
+            int laleta = int.Parse(Console.ReadLine());
+            string season = Console.ReadLine();
+            string holiday = Console.ReadLine();
+            double flowers = hrizantemi + rozi + laleta;
+
+            if(season=="Spring")
+            {
+                double hrizantemiPrice = 2;
+                double roziPrice = 4.1;
+                double laletaPrice = 2.5;
+                double total = hrizantemiPrice * hrizantemi + roziPrice * rozi + laletaPrice * laleta;
+                if(flowers>20)
+                {
+                    if(laleta>7)
+                    {
+                        if(holiday=="Y")
+                        {
+                            total = total + (total * 0.15);
+                            total = total - (total * 0.05);
+                            double total2 = total - (total * 0.2) + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                        else if(holiday=="N")
+                        {
+                            total = total - (total * 0.05);
+                            double total2 = total - (total * 0.2) + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                    }
+                    else
+                    {
+                        if(holiday=="Y")
+                        {
+                            total = total + (total * 0.15);
+                            double total2 = total - (total * 0.2) + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                        else if(holiday=="N")
+                        {                            
+                            double total2 = total - (total * 0.2) + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                    }
+                }
+                else
+                {
+                    if (laleta > 7)
+                    {
+                        if (holiday == "Y")
+                        {
+                            total = total + (total * 0.15);
+                            total = total - (total * 0.05);
+                            double total2 = total  + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                        else if (holiday == "N")
+                        {
+                            total = total - (total * 0.05);
+                            double total2 = total  + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                    }
+                    else
+                    {
+                        if (holiday == "Y")
+                        {
+                            total = total + (total * 0.15) + 2;
+                            
+                            Console.WriteLine($"{total:f2}");
+                        }
+                        else if (holiday == "N")
+                        {
+                            double total2 = total  + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                    }
+                }
+            }
+            else if(season=="Summer")
+            {
+                double hrizantemiPrice = 2;
+                double roziPrice = 4.1;
+                double laletaPrice = 2.5;
+                double total = hrizantemiPrice * hrizantemi + roziPrice * rozi + laletaPrice * laleta;
+                if (flowers > 20)
+                {
+                    
+                        if (holiday == "Y")
+                        {
+                            total = total + (total * 0.15);
+                            double total2 = total - (total * 0.2) + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                        else if (holiday == "N")
+                        {
+                            double total2 = total - (total * 0.2) + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                    
+                }
+                else
+                {
+                    
+                        if (holiday == "Y")
+                        {
+                            total = total + (total * 0.15) + 2;
+
+                            Console.WriteLine($"{total:f2}");
+                        }
+                        else if (holiday == "N")
+                        {
+                            double total2 = total + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                    
+                }
+            }
+            else if(season=="Autumn")
+            {
+                double hrizantemiPrice = 3.75;
+                double roziPrice = 4.50;
+                double laletaPrice = 4.15;
+                double total = hrizantemiPrice * hrizantemi + roziPrice * rozi + laletaPrice * laleta;
+                if (flowers > 20)
+                {
+                    
+                        if (holiday == "Y")
+                        {
+                            total = total + (total * 0.15);
+                            double total2 = total - (total * 0.2) + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                        else if (holiday == "N")
+                        {
+                            double total2 = total - (total * 0.2) + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                    
+                }
+                else
+                {
+                    
+                        if (holiday == "Y")
+                        {
+                            total = total + (total * 0.15) + 2;
+
+                            Console.WriteLine($"{total:f2}");
+                        }
+                        else if (holiday == "N")
+                        {
+                            double total2 = total + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                    
+                }
+            }
+            else if(season=="Winter")
+            {
+                double hrizantemiPrice = 3.75;
+                double roziPrice = 4.50;
+                double laletaPrice = 4.15;
+                double total = hrizantemiPrice * hrizantemi + roziPrice * rozi + laletaPrice * laleta;
+                if (flowers > 20)
+                {
+                    if (rozi >= 10)
+                    {
+                        if (holiday == "Y")
+                        {
+                            total = total + (total * 0.15);
+                            total = total - (total * 0.1);
+                            double total2 = total - (total * 0.2) + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                        else if (holiday == "N")
+                        {
+                            total = total - (total * 0.1);
+                            double total2 = total - (total * 0.2) + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                    }
+                    else
+                    {
+                        if (holiday == "Y")
+                        {
+                            total = total + (total * 0.15);
+                            double total2 = total - (total * 0.2) + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                        else if (holiday == "N")
+                        {
+                            double total2 = total - (total * 0.2) + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                    }
+                }
+                else
+                {
+                    if (rozi >= 10)
+                    {
+                        if (holiday == "Y")
+                        {
+                            total = total + (total * 0.15);
+                            total = total - (total * 0.1);
+                            double total2 = total + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                        else if (holiday == "N")
+                        {
+                            total = total - (total * 0.1);
+                            double total2 = total + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                    }
+                    else
+                    {
+                        if (holiday == "Y")
+                        {
+                            total = total + (total * 0.15) + 2;
+
+                            Console.WriteLine($"{total:f2}");
+                        }
+                        else if (holiday == "N")
+                        {
+                            double total2 = total + 2;
+                            Console.WriteLine($"{total2:f2}");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

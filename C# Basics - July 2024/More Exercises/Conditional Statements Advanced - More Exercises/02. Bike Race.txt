@@ -1,0 +1,67 @@
+using System;
+
+namespace _02._Bike_Race
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int juniors = int.Parse(Console.ReadLine());
+            int seniors = int.Parse(Console.ReadLine());
+            string trail = Console.ReadLine();
+
+            if(trail=="trail")
+            {
+                double juniorPrice = 5.50;
+                double seniorPrice = 7;
+                double juniorTotal = juniorPrice * juniors;
+                double seniorTotal = seniorPrice * seniors;
+                double all = juniorTotal + seniorTotal;
+                double total = all - (all * 0.05);
+                Console.WriteLine($"{total:f2}");
+            }
+            else if(trail=="cross-country")
+            {
+                double juniorPrice = 8;
+                double seniorPrice = 9.50;
+                double juniorTotal = juniorPrice * juniors;
+                double seniorTotal = seniorPrice * seniors;
+                double all = juniorTotal + seniorTotal;
+                if(juniors+seniors>=50)
+                {
+                    double totalD = all - (all * 0.25);
+                    double total = totalD - (totalD * 0.05);
+                    Console.WriteLine($"{total:f2}");
+                }
+                else
+                {
+                    double total = all - (all * 0.05);
+                    Console.WriteLine($"{total:f2}");
+                }
+
+            }
+            else if(trail=="downhill")
+            {
+                double juniorPrice = 12.25;
+                double seniorPrice = 13.75;
+                double juniorTotal = juniorPrice * juniors;
+                double seniorTotal = seniorPrice * seniors;
+                double all = juniorTotal + seniorTotal;
+                double total = all - (all * 0.05);
+                Console.WriteLine($"{total:f2}");
+            }
+            else if(trail=="road")
+            {
+
+                double juniorPrice = 20;
+                double seniorPrice = 21.50;
+                double juniorTotal = juniorPrice * juniors;
+                double seniorTotal = seniorPrice * seniors;
+                double all = juniorTotal + seniorTotal;
+                double total = all - (all * 0.05);
+                Console.WriteLine($"{total:f2}");
+            }
+
+        }
+    }
+}

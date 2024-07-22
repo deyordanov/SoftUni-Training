@@ -1,0 +1,78 @@
+using System;
+
+namespace _06._Truck_Driver
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string season = Console.ReadLine();
+            double km = double.Parse(Console.ReadLine());
+
+            if(season=="Spring"||season=="Autumn")
+            {
+                if(km<=5000)
+                {
+                    double kmPay = 0.75;
+                    double total = ((kmPay * km) - (kmPay * km) * 0.1) * 4;
+                    Console.WriteLine($"{total:f2}");
+                }
+                else if(km>5000&&km<=10000)
+                {
+                    double kmPay = 0.95;
+                    double total = ((kmPay * km) - (kmPay * km) * 0.1) * 4;
+                    Console.WriteLine($"{total:f2}");
+                }
+                else if(km>10000&&km<=20000)
+                {
+                    double kmPay = 1.45;
+                    double total = ((kmPay * km) - (kmPay * km) * 0.1) * 4;
+                    Console.WriteLine($"{total:f2}");
+                }
+            }
+            else if(season=="Summer")
+            {
+                if (km <= 5000)
+                {
+                    double kmPay = 0.90;
+                    double total = ((kmPay * km) - (kmPay * km) * 0.1)*4;
+                    Console.WriteLine($"{total:f2}");
+                }
+                else if (km > 5000 && km <= 10000)
+                {
+                    double kmPay = 1.10;
+                    double total = ((kmPay * km) - (kmPay * km) * 0.1) * 4;
+                    Console.WriteLine($"{total:f2}");
+                }
+                else if (km > 10000 && km <= 20000)
+                {
+                    double kmPay = 1.45;
+                    double total = ((kmPay * km) - (kmPay * km) * 0.1) * 4;
+                    Console.WriteLine($"{total:f2}");
+                }
+            }
+            else if(season=="Winter")
+            {
+                if (km <= 5000)
+                {
+                    double kmPay = 1.05;
+                    double total = ((kmPay * km) - (kmPay * km) * 0.1)*4;
+                    Console.WriteLine($"{total:f2}");
+                }
+                else if (km > 5000 && km <= 10000)
+                {
+                    double kmPay = 1.25;
+                    double total = ((kmPay * km) - (kmPay * km) * 0.1) * 4;
+                    Console.WriteLine($"{total:f2}");
+                }
+                else if (km > 10000 && km <= 20000)
+                {
+                    double kmPay = 1.45;
+                    double total = ((kmPay * km) - (kmPay * km) * 0.1) * 4;
+                    Console.WriteLine($"{total:f2}");
+                }
+            }
+
+        }
+    }
+}

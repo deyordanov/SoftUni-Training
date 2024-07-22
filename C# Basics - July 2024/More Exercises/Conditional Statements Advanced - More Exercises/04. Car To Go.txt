@@ -1,0 +1,62 @@
+using System;
+
+namespace _04._Car_To_Go
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double budget = double.Parse(Console.ReadLine());
+            string season = Console.ReadLine();
+            if(budget<=100)
+            {
+                if(season=="Summer")
+                {
+                    double cabrio = budget * 0.35;
+                    Console.WriteLine("Economy class");
+                    Console.WriteLine("Cabrio - " + $"{cabrio:f2}");
+
+                }
+                else if(season=="Winter")
+                {
+                    double jeep = budget * 0.65;
+                    Console.WriteLine("Economy class");
+                    Console.WriteLine("Jeep - " + $"{jeep:f2}");
+                }
+            }
+            else if(budget>100&&budget<=500)
+            {
+                if (season == "Summer")
+                {
+                    double cabrio = budget * 0.45;
+                    Console.WriteLine("Compact class");
+                    Console.WriteLine("Cabrio - " + $"{cabrio:f2}");
+
+                }
+                else if (season == "Winter")
+                {
+                    double jeep = budget * 0.80;
+                    Console.WriteLine("Compact class");
+                    Console.WriteLine("Jeep - " + $"{jeep:f2}");
+                }
+            }
+            else if(budget>500)
+            {
+                if (season == "Summer")
+                {
+                    double jeep = budget * 0.9;
+                    Console.WriteLine("Luxury class");
+                    Console.WriteLine("Jeep - " + $"{jeep:f2}");
+
+                }
+                else if (season == "Winter")
+                {
+                    double jeep = budget * 0.9;
+                    Console.WriteLine("Luxury class");
+                    Console.WriteLine("Jeep - " + $"{jeep:f2}");
+                }
+            }
+            
+        }
+    }
+}
