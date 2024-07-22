@@ -1,0 +1,22 @@
+using System;
+
+namespace _02._Rectangle_of_N_x_N_Stars
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            for(int i = 1; i<=n; i++)
+            {
+                for(int a = 1; a <=n-1; a++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine("*");
+            }
+                
+
+        }
+    }
+}

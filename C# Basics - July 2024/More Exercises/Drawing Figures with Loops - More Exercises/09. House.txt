@@ -1,0 +1,30 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+
+        // Print the roof
+        int stars = (n % 2 == 0) ? 2 : 1;
+        int dashes = (n - stars) / 2;
+
+        for (int i = 0; i < (n + 1) / 2; i++)
+        {
+            Console.Write(new string('-', dashes));
+            Console.Write(new string('*', stars));
+            Console.WriteLine(new string('-', dashes));
+            stars += 2;
+            dashes--;
+        }
+
+        // Print the base
+        for (int i = 0; i < n / 2; i++)
+        {
+            Console.Write('|');
+            Console.Write(new string('*', n - 2));
+            Console.WriteLine('|');
+        }
+    }
+}
