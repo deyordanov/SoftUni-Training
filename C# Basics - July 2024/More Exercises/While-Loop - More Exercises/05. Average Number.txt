@@ -1,0 +1,22 @@
+using System;
+
+namespace _05._Average_Number
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double n = int.Parse(Console.ReadLine());
+            double sum = 0;
+            double counter = 0;
+            for(int i = 1; i<=n; i++)
+            {
+                int a = int.Parse(Console.ReadLine());
+                sum += a;
+                counter++;
+            }
+            double average = sum / counter;
+            Console.WriteLine($"{average:f2}");
+        }
+    }
+}

@@ -1,0 +1,47 @@
+using System;
+
+namespace _01._Dishwasher
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int bottles = int.Parse(Console.ReadLine());
+            string end;
+            int totalBottles = bottles * 750;
+            int totalBottles2 = totalBottles;
+            int counter = 0;
+            int totalCleanPlates = 0;
+            int totalCleanPots = 0;
+            int totalPlatesUse = 0;
+            while((end=Console.ReadLine()) != "End")
+            {
+                counter++;
+                int plates = int.Parse(end);
+                int platesUse = plates * 5;
+
+                if(counter%3==0)
+                {
+                    platesUse = plates * 15;
+                    totalCleanPots += plates;
+                }
+
+                totalBottles -= platesUse;
+                totalPlatesUse += platesUse;
+                if(totalBottles <0)
+                {
+                    int need = totalPlatesUse - totalBottles2;
+                    Console.WriteLine($"Not enough detergent, {need} ml. more necessary!");
+                    return;
+                }
+
+                totalCleanPlates += plates;
+            }
+            totalCleanPlates = totalCleanPlates - totalCleanPots;
+            int left = totalBottles2 - totalPlatesUse;
+            Console.WriteLine("Detergent was enough!");
+            Console.WriteLine($"{totalCleanPlates} dishes and {totalCleanPots} pots were washed.");
+            Console.WriteLine($"Leftover detergent {left} ml.");
+        }
+    }
+}

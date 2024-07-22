@@ -1,0 +1,66 @@
+using System;
+
+namespace _02._Report_System
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int sumToCollect = int.Parse(Console.ReadLine());
+            int counter = 0;
+            string end;
+            double cash = 0;
+            double card = 0;
+            int cashCounter = 0;
+            int cardCounter = 0;
+            int totalMoney = 0;
+            while((end = Console.ReadLine()) != "End")
+            {
+                counter++;
+                int itemPrice = int.Parse(end);
+                if(counter%2==0)
+                {
+                    if(itemPrice<10)
+                    {
+                        Console.WriteLine("Error in transaction!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Product sold!");
+                        totalMoney += itemPrice;
+                        card += itemPrice;
+                        cardCounter++;
+                    }
+                }
+                else
+                {
+                    if(itemPrice>100)
+                    {
+                        Console.WriteLine("Error in transaction!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Product sold!");
+                        totalMoney += itemPrice;
+                        cash += itemPrice;
+                        cashCounter++;
+
+                    }
+                    
+                }
+
+                if(totalMoney >= sumToCollect)
+                {
+                    double cashAverage = cash / cashCounter;
+                    double cardAverage = card / cardCounter;
+                    Console.WriteLine($"Average CS: {cashAverage:f2}");
+                    Console.WriteLine($"Average CC: {cardAverage:f2}");
+                    return;
+                }
+
+            }
+
+            Console.WriteLine("Failed to collect required money for charity.");
+        }
+    }
+}
