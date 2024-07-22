@@ -1,0 +1,29 @@
+using System;
+
+namespace _09._Clock
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int min = 0;
+            int hours = 0;
+            for (int i = 0; i <=1439; i++)
+            {
+                
+                for (int b = 1; b <=23; b++)
+                {
+                   if(min==60)
+                    {
+                        min -= 60;
+                        hours += 1;
+                    }
+                }
+                
+                Console.WriteLine(hours + " : " + min);
+                min++;
+            }
+            
+        }
+    }
+}

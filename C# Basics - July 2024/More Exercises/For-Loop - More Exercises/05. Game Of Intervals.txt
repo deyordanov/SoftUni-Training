@@ -1,0 +1,68 @@
+using System;
+
+namespace _05._Game_Of_Intervals
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int hodove = int.Parse(Console.ReadLine());
+            double points = 0;
+            double counter1 = 0;
+            double counter2 = 0;
+            double counter3 = 0;
+            double counter4 = 0;
+            double counter5 = 0;
+            double counter6 = 0;
+            for(int i = 0; i < hodove; i++)
+            {
+                int numbers = int.Parse(Console.ReadLine());
+                if(numbers>=0&&numbers<=9)
+                {
+                    points += 0.2 * numbers;
+                    counter1 += 1;
+                }
+                else if(numbers>=10&&numbers<=19)
+                {
+                    points += 0.3 * numbers;
+                    counter2 += 1;
+                }
+                else if(numbers>=20&&numbers<=29)
+                {
+                    points += 0.4 * numbers;
+                    counter3 += 1;
+                }
+                else if(numbers>=30&&numbers<=39)
+                {
+                    points += 50;
+                    counter4 += 1;
+                }
+                else if(numbers>=40&&numbers<=50)
+                {
+                    points += 100;
+                    counter5 += 1;
+                }
+                else if(numbers>50||numbers<0)
+                {
+                    points = points / 2;
+                    counter6 += 1;
+                }
+                
+            }
+            double totalNum = counter1 + counter2 + counter3 + counter4 + counter5 + counter6;
+            double counter1P = (counter1 / totalNum) * 100;
+            double counter2P = (counter2 / totalNum) * 100;
+            double counter3P = (counter3 / totalNum) * 100;
+            double counter4P = (counter4 / totalNum) * 100;
+            double counter5P = (counter5 / totalNum) * 100;
+            double counter6P = (counter6 / totalNum) * 100;
+            Console.WriteLine($"{points:f2}");
+            Console.WriteLine("From 0 to 9: " + $"{counter1P:f2}" + "%");
+            Console.WriteLine("From 10 to 19: " + $"{counter2P:f2}" + "%");
+            Console.WriteLine("From 20 to 29: " + $"{counter3P:f2}" + "%");
+            Console.WriteLine("From 30 to 39: " + $"{counter4P:f2}" + "%");
+            Console.WriteLine("From 40 to 50: " + $"{counter5P:f2}" + "%");
+            Console.WriteLine("Invalid numbers: " + $"{counter6P:f2}" + "%");
+        }
+    }
+}

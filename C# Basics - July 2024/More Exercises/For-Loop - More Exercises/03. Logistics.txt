@@ -1,0 +1,49 @@
+using System;
+
+namespace _03._Logistics
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int amount = int.Parse(Console.ReadLine());
+            double microbusP = 0;
+            double busP = 0;
+            double vlakP = 0;
+            double totalTons = 0;
+            double microT = 0;
+            double busT = 0;
+            double vlakT = 0;
+            for(int i = 1; i <= amount; i++)
+            {
+                int tons = int.Parse(Console.ReadLine());
+                totalTons += tons;
+                if (tons<=3)
+                {
+                    microbusP += 200;
+                    microT += tons;
+                }
+                else if(tons>=4&&tons<=11)
+                {
+                    busP += 175;
+                    busT += tons;
+                }
+                else if(tons>=12)
+                {
+                    vlakP += 120;
+                    vlakT += tons;
+                }
+                
+            }
+            double totalSum = (200 * microT + 175 * busT + 120 * vlakT)/totalTons;
+            double microbusP2 = (microT / totalTons) * 100;
+            double busP2 = (busT / totalTons) * 100;
+            double vlakP2 = (vlakT / totalTons) * 100;
+
+            Console.WriteLine($"{totalSum:f2}");
+            Console.WriteLine($"{microbusP2:f2}" + "%");
+            Console.WriteLine($"{busP2:f2}" + "%");
+            Console.WriteLine($"{vlakP2:f2}" + "%");
+        }
+    }
+}

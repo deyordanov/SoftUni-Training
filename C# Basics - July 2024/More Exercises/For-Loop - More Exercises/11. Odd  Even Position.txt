@@ -1,0 +1,79 @@
+using System;
+
+namespace _11._Odd___Even_Positionn
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int a = int.Parse(Console.ReadLine());
+            double maxOdd = double.MinValue;
+            double minOdd = double.MaxValue;
+            double maxEven = double.MinValue;
+            double minEven = double.MaxValue;
+            double oddSum = 0;
+            double evenSum = 0;
+            for(int i = 1; i <= a; i++)
+            {
+                double numbers = double.Parse(Console.ReadLine());
+
+                if(i%2==0)
+                {
+                    evenSum += numbers;
+                    if(numbers>maxEven)
+                    {
+                        maxEven = numbers;
+                    }
+
+                    if(numbers<minEven)
+                    {
+                        minEven = numbers;
+                    }
+                }
+                else
+                {
+                    oddSum += numbers;
+                    if(numbers>maxOdd)
+                    {
+                        maxOdd = numbers;
+                    }
+
+                    if(numbers<minOdd)
+                    {
+                        minOdd = numbers;
+                    }
+                }
+
+            }
+
+            if(maxOdd==0||maxOdd==double.MinValue&&minOdd==0||minOdd==double.MaxValue)
+            {
+                Console.WriteLine("OddSum=" + $"{oddSum:f2}" + ",");
+                Console.WriteLine("OddMin=No,");
+                Console.WriteLine("OddMax=No,");
+            }
+            else
+            {
+                Console.WriteLine("OddSum=" + $"{oddSum:f2}" + ",");
+                Console.WriteLine("OddMin=" + $"{minOdd:f2}" + ",");
+                Console.WriteLine("OddMax=" + $"{maxOdd:f2}" + ",");
+            }
+
+            if(maxEven==0||maxEven==double.MinValue&&minEven==0||minEven==double.MaxValue)
+            {
+                Console.WriteLine("EvenSum=" + $"{evenSum:f2}" + ",");
+                Console.WriteLine("EvenMin=No,");
+                Console.WriteLine("EvenMax=No");
+            }
+            else
+            {
+                Console.WriteLine("EvenSum=" + $"{evenSum:f2}" + ",");
+                Console.WriteLine("EvenMin=" + $"{minEven:f2}" + ",");
+                Console.WriteLine("EvenMax=" + $"{maxEven:f2}");
+            }
+
+            
+        }
+    }
+}

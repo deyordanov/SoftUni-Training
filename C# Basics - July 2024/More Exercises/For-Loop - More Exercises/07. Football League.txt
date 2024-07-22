@@ -1,0 +1,48 @@
+using System;
+
+namespace _07._Football_League
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double capacity = int.Parse(Console.ReadLine());
+            double fansNum = int.Parse(Console.ReadLine());
+            double fansA = 0;
+            double fansB = 0;
+            double fansV = 0;
+            double fansG = 0;
+            for(int i = 1; i<=fansNum; i++)
+            {
+                string sector = Console.ReadLine();
+                switch(sector)
+                {
+                    case "A":
+                        fansA += 1;
+                        break;
+                    case "B":
+                        fansB +=1;
+                        break;
+                    case "V":
+                        fansV += 1;
+                        break;
+                    case "G":
+                        fansG += 1;
+                        break;
+                }
+            }
+            double AP = (fansA / fansNum) * 100;
+            double BP = (fansB / fansNum) * 100;
+            double VP = (fansV / fansNum) * 100;
+            double GP = (fansG / fansNum) * 100;
+            double fansTotal = (fansNum / capacity) * 100;
+            Console.WriteLine($"{AP:f2}" + "%");
+            Console.WriteLine($"{BP:f2}" + "%");
+            Console.WriteLine($"{VP:f2}" + "%");
+            Console.WriteLine($"{GP:f2}" + "%");
+            Console.WriteLine($"{fansTotal:f2}" + "%");
+
+
+        }
+    }
+}

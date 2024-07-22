@@ -1,0 +1,48 @@
+using System;
+
+namespace _04._Grades
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int amount = int.Parse(Console.ReadLine());
+            double bad = 0;
+            double good = 0;
+            double great = 0;
+            double excellent = 0;
+            double totalGrades = 0;
+            for(int i = 0; i < amount; i++)
+            {
+                double grades = double.Parse(Console.ReadLine());
+                totalGrades += grades;
+                if(grades>=2.00&grades<=2.99)
+                {
+                    bad += 1;
+                }
+                else if(grades>=3.00&&grades<=3.99)
+                {
+                    good += 1;
+                }
+                else if(grades>=4.00&&grades<=4.99)
+                {
+                    great += 1;
+                }
+                else if(grades>=5.00)
+                {
+                    excellent += 1;
+                }
+            }
+            double average = totalGrades / amount;
+            double badP = (bad / amount) * 100;
+            double goodP = (good / amount) * 100;
+            double greatP = (great / amount) * 100;
+            double excellentP = (excellent / amount) * 100;
+            Console.WriteLine("Top students: " + $"{excellentP:f2}" + "%");
+            Console.WriteLine("Between 4.00 and 4.99: " + $"{greatP:f2}" + "%");
+            Console.WriteLine("Between 3.00 and 3.99: " + $"{goodP:f2}" + "%");
+            Console.WriteLine("Fail: " + $"{badP:f2}" + "%");
+            Console.WriteLine("Average: " + $"{average:f2}");
+        }
+    }
+}

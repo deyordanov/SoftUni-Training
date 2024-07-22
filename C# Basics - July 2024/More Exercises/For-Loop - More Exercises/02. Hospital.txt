@@ -1,0 +1,43 @@
+using System;
+
+namespace _02._Hospital
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int days = int.Parse(Console.ReadLine());
+            int doctors = 7;
+            int untreatedPatients = 0;
+            int treatedPatients = 0;
+            for (int i = 1; i <= days; i++)
+            {
+                if (i % 3 == 0 && untreatedPatients > treatedPatients)
+                {
+                    doctors += 1;
+                }
+
+                int patients = int.Parse(Console.ReadLine());
+                if(patients>doctors)
+                {
+                    untreatedPatients += patients - doctors;
+                    treatedPatients += doctors;
+                }
+                else if(patients==doctors)
+                {
+                    treatedPatients += doctors;
+                    untreatedPatients += 0;
+                }
+                else if(patients<doctors)
+                {
+                    treatedPatients += doctors - (doctors - patients);
+                    untreatedPatients += 0;
+                }
+
+                
+            }
+            Console.WriteLine("Treated patients: " + treatedPatients + ".");
+            Console.WriteLine("Untreated patients: " + untreatedPatients + ".");
+        }
+    }
+}

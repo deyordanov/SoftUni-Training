@@ -1,0 +1,37 @@
+using System;
+
+namespace _01._Back_To_The_Past
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double money = double.Parse(Console.ReadLine());
+            int time = int.Parse(Console.ReadLine());
+            int ageM = 18;
+            int i;
+            for(i = 1800; i <=time; i++)
+            {
+                
+                if(i%2==0)
+                {
+                    money = money - 12000;
+                }
+                else
+                {
+                    money = money - (12000 + 50 * ageM);
+                }
+                ageM++;
+            }
+            if(money>=0)
+            {
+                Console.WriteLine("Yes! He will live a carefree life and will have " + $"{money:f2}" + " dollars left.");
+            }
+            else
+            {
+                double  money2 = Math.Abs(money);
+                Console.WriteLine("He will need " + $"{money2:f2}" + " dollars to survive.");
+            }
+        }
+    }
+}
