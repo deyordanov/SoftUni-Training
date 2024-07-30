@@ -2,7 +2,7 @@
 
 string actor = Console.ReadLine();
 double points = double.Parse(Console.ReadLine());
-double judges = int.Parse(Console.ReadLine());
+int judges = int.Parse(Console.ReadLine());
 
 for (int i = 0; i < judges && points <= nominationPoints; i++)
 {
