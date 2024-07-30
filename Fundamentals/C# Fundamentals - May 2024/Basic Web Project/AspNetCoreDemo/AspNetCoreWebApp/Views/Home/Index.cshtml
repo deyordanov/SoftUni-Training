@@ -1,0 +1,8 @@
+﻿@using DemoWebApp.Models
+
+@model List<Course>
+
+@foreach (Course course in Model)
+{
+    <p>@course.Name</p>
+}

@@ -1,0 +1,15 @@
+﻿@model int
+
+<h1>Numbers should be displayed here!</h1>
+
+<form method="post">
+    <input type="number" name="number" />
+    <button type="submit">Submit</button>
+</form>
+
+<div id="txt"></div>
+
+@for(int i = 1; i <= Model; i++)
+{
+    <div>@i</div>
+}
