@@ -1,4 +1,4 @@
-﻿namespace CustomIoCContainer
+﻿namespace CustomInversionOfControlContainer
 {
     public interface IServiceCollection : IList<ServiceDescriptor>
     {

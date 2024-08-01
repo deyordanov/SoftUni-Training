@@ -1,6 +1,6 @@
-﻿namespace FollowingDependencyInversionPrinciple
+﻿namespace NotFollowingDependencyInversion
 {
-    public class DieselEngine : IEngine
+    public class Engine
     {
         public void Start()
         {

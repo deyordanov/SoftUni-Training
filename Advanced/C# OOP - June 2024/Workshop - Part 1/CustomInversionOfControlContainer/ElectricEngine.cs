@@ -1,6 +1,6 @@
-﻿namespace FollowingDependencyInversionPrinciple
+﻿namespace CustomInversionOfControlContainer
 {
-    internal class ElectricEngine : IEngine
+    public class ElectricEngine : IEngine
     {
         public void Start()
         {

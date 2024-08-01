@@ -1,4 +1,4 @@
-﻿namespace FollowingDependencyInversionPrinciple
+﻿namespace CustomInversionOfControlContainer
 {
     public class GasolineEngine : IEngine
     {
